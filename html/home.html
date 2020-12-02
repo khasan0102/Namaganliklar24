@@ -6,11 +6,7 @@
    <link rel="stylesheet" href="../css/normalize.css">
    <link rel="stylesheet" href="../css/global_styles.css">
    <link rel="stylesheet" href="../css/home.css">
-   <style>
-      *{
-         font-family: 'Rubik';
-      }
-   </style>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
    <title>Namanganliklar_24 Home</title>
 </head>
 <body>
@@ -44,7 +40,7 @@
                      </button>
                   </li>
                </ul>
-
+               <button class="group" id="group">Group</button>
                <a href="https://t.me/Web_standart_1" target="_blank" class="header-link"><img src="../images/cib_telegram.svg" alt="telegram img" width="20" height="20"><span>Подписатся</span></a>
              </div>
          </section>
@@ -349,5 +345,36 @@
           </section>
        </div>
     </footer>
+
+
+
+    <div id="modal" class="modal">
+       <div class="modal-box">
+        <button id="closeBtn" class="modal-btn"></button>
+
+        <h2 class="modal-heading">Подписывайтесь на наш канал в Telegram <br> и будьте всегда в курсе самых последних новостей:</h2>
+
+        <a href="https://t.me/Web_standart_1" target="_blank" class="header-link modal-link"><img src="../images/cib_telegram.svg" alt="telegram img" width="31" height="31"><span>Подписатся</span></a>
+       </div>
+    </div>
+
+
+
+    <script>
+       let modal =  document.querySelector('#modal');
+       let group = document.querySelector('#group');
+       let closeBtn = document.querySelector('#closeBtn');
+
+       group.addEventListener('click', function() {
+          modal.classList.remove('modal-block');
+          modal.classList.add('modal');
+       });
+
+       closeBtn.addEventListener('click', function(){
+          modal.classList.remove('modal');
+          modal.classList.add('modal-block');
+       })
+      
+    </script>
 </body>
 </html>
