@@ -512,15 +512,17 @@
 	border: none;
 	background: none;
 	outline: none;
-	width: 20px;
-	height: 20px;
-	background-image: url('../images/close.svg');
-	background-size: 20px 20px;
-	background-position: center;
-	cursor: pointer;
+	width: 30px;
+	height: 30px;
 	padding: 10px;
+	cursor: pointer;
+	opacity: 0.5;
+	transition: opacity 0.3s ease;
 }
 
+.modal-box .modal-btn:hover{
+	opacity: 1;
+}
 .modal-heading {
 	font-weight: 500;
 	font-size: 26px;
